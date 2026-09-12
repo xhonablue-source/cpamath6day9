@@ -490,7 +490,7 @@ st.progress((step + 1) / len(steps))
 if step == 0:
     box(
         "observer",
-        "🔎 OBSERVER NOTE — carried from Day 8",
+        "🔎 TODAY'S FOCUS — continued from Day 8",
         "<p style='margin:0'>Day 8 proved the big idea: a parallelogram is a rectangle in disguise, so "
         "Area = base × height, using the perpendicular height and never the slant. Today doesn't teach "
         "a new idea — it's the i-Ready <b>Refine</b> session: guided practice on that same idea, a set "
