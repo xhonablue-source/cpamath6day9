@@ -488,6 +488,50 @@ st.progress((step + 1) / len(steps))
 # STEP 0 — Welcome back / warm-up
 # ======================================================================
 if step == 0:
+    st.markdown("### 🧠 Opener Question")
+    st.write(
+        "Both images below say the same thing: **Same Base. Same Height. Same Area.** "
+        "Both get the *area* right. But only one of them describes **height** in a way "
+        "that still works no matter how the parallelogram leans. Study both pictures, "
+        "then pick the one that's right."
+    )
+    col_a, col_b = st.columns(2)
+    with col_a:
+        st.image("assets/opener_option_A.jpg", caption="Option A", use_container_width=True)
+    with col_b:
+        st.image("assets/opener_option_B.jpg", caption="Option B", use_container_width=True)
+    opener_pick = st.radio(
+        "Which image correctly labels the height of a parallelogram?",
+        ["Option A", "Option B"], key="opener_pick", index=None,
+    )
+    if st.button("Check my answer", key="check_opener"):
+        attempt("opener")
+        if opener_pick == "Option A":
+            st.success(
+                "Option A is the stronger diagram. Look at BOTH panels: it calls the height "
+                "the “perpendicular distance” every time — for the square AND the leaning "
+                "parallelogram. It also does exactly what today's lesson warns about: it "
+                "labels the slanted side by name and tells you flat-out, “NOT the height and "
+                "NOT used for area.” That's the exact trap you'll see later today in the barn "
+                "window problem."
+            )
+        else:
+            st.info(
+                "Option B isn't wrong about the *area* — but look closely at its 'Before' "
+                "label: it calls the height the “right side.” That description only happens "
+                "to work because a square has a vertical right side. The moment the shape "
+                "leans (the 'After' picture), “right side” stops meaning anything, so the "
+                "label has to switch definitions mid-problem. A correct rule for height has "
+                "to work in BOTH pictures without changing — compare it with Option A."
+            )
+    box(
+        "literacy",
+        "📖 WHY THIS MATTERS",
+        "The height of a parallelogram is always the <b>perpendicular</b> distance between "
+        "the base and the opposite side — never a side's position (like &ldquo;right "
+        "side&rdquo;), and never the slanted side. Keep that one rule in your head all day.",
+    )
+    st.markdown("---")
     box(
         "observer",
         "🔎 TODAY'S FOCUS — continued from Day 8",
