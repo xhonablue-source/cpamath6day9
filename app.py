@@ -1,9 +1,9 @@
 """
-CPA Math 6 — Day 9: Area of a Parallelogram — Refine, Practice & Quiz
+Math 6 — Day 9: Area of a Parallelogram — Refine, Practice & Quiz
 Built to match the visual/interactive structure of the Day 5 ("Area Is
 Multiplication"), Day 6 ("Area Unlocks the Missing Side"), Day 7 ("Area of
 Compound Rectangles"), and Day 8 ("Area of a Parallelogram — Explore &
-Model It") apps by Xavier Honablue, M.Ed — Chandler Park Academy.
+Model It") apps by Xavier Honablue, M.Ed.
 
 Day 8 covered i-Ready Classroom Mathematics Lesson 1, Session 2's Explore ->
 Model It -> Try It portion (the cut-and-slide proof that a parallelogram is
@@ -1057,7 +1057,6 @@ if c_next.button("Next ➡", disabled=(step == len(steps) - 1)):
 st.caption("Standards in play: 6.G.A.1 (area of a parallelogram) · 3.MD.C.7d (decompose into "
            "rectangles — foundational) · MP.2, MP.4, MP.5, MP.6.")
 st.markdown(
-    "<div class='credit'>www.cognitivecloud.ai &middot; Developed by Xavier Honablue, M.Ed &middot; "
-    "Chandler Park Academy</div>",
+    "<div class='credit'>www.cognitivecloud.ai &middot; Developed by Xavier Honablue, M.Ed</div>",
     unsafe_allow_html=True,
 )
